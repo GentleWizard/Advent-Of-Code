@@ -1,3 +1,7 @@
+import time
+
+now = time.time()
+
 with open("codes.txt", "r") as f:
 	codes = f.readlines()
 
@@ -7,6 +11,10 @@ for code in codes:
 	if digits:
 		calibration_value = int(str(digits[0]) + str(digits[-1]))
 		calibration_values.append(calibration_value)
+		print(f"code: {code}")
+		print(f"digits: {digits}")
+		print(f"calibration_value: {calibration_value}")
 
 total_sum = sum(calibration_values)
-print(total_sum)
+print(f"\ntotal_sum: {total_sum}")
+print(f"took {time.time() - now} seconds")
