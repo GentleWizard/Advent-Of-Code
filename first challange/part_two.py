@@ -1,7 +1,7 @@
 import re
 import time
 
-now = time.time()
+START = time.time()
 
 with open("codes.txt", "r") as f:
 	codes = f.readlines()
@@ -60,4 +60,4 @@ for code in codes:
 
 total_sum = sum(calibration_values)
 print(f"\ntotal_sum: {total_sum}")
-print(f"Time: {time.time() - now}")
+print(f"Time: {time.time() - START}")
